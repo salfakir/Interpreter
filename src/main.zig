@@ -1,4 +1,5 @@
 const std = @import("std");
+const parser = @import("parser/p1.zig");
 
 pub fn main() !void {
     // You can use print statements as follows for debugging, they'll be visible when running tests.
@@ -25,7 +26,8 @@ pub fn main() !void {
 
     // Uncomment this block to pass the first stage
     if (file_contents.len > 0) {
-        @panic("Scanner not implemented");
+        // @panic("Scanner not implemented");
+        parser.parse(file_contents);
     } else {
         try std.io.getStdOut().writer().print("EOF  null\n", .{}); // Placeholder, remove this line when implementing the scanner
     }
