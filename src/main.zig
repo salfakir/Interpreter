@@ -1,5 +1,5 @@
 const std = @import("std");
-const parser = @import("parser/p1.zig");
+const parser = @import("parser1");
 
 pub fn main() !void {
     // You can use print statements as follows for debugging, they'll be visible when running tests.
